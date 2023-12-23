@@ -425,7 +425,13 @@
 			var request = {
 				BodyTemperature: $form.find("#bodyTemperture").val(),
 				BackgroundIllness: $form.find("#backgroundIll").val(),
-				IdMedicalRecord: $form.find("#idMedicalRecord").val(),
+				Height: $form.find("#height").val().trim(),
+				Weight: $form.find("#weight").val().trim(),
+				BloodPressure: $form.find("#bloodPressure").val().trim(),
+				MedicalHistory: $form.find("#medicalHistory").val().trim(),
+				CurrentHealthStatus: $form.find("#currentHealthStatus").val().trim(),
+				BackgroundIllness: $form.find("#backgroundIll").val().trim(),
+				IdMedicalRecord: $form.find("#idMedicalRecord").val().trim(),
 			}
 			var configAjax = {
 				url: '/Admin/MedicalRecord/CreateDetail',
@@ -448,8 +454,15 @@
 		},
 		UpdateDetail: function ($form) {
 			var request = {
-				BodyTemperature: $form.find("#bodyTemperture").val(),
-				BackgroundIllness: $form.find("#backgroundIll").val(),
+				BodyTemperature: $form.find("#bodyTemperture").val().trim(),
+				BackgroundIllness: $form.find("#backgroundIll").val().trim(),
+				Height: $form.find("#height").val().trim(),
+				Weight: $form.find("#weight").val().trim(),
+				BloodPressure: $form.find("#bloodPressure").val().trim(),
+				MedicalHistory: $form.find("#medicalHistory").val().trim(),
+				CurrentHealthStatus: $form.find("#currentHealthStatus").val().trim(),
+				BackgroundIllness: $form.find("#backgroundIll").val().trim(),
+				IdMedicalRecord: $form.find("#idMedicalRecord").val(),
 				Id: $form.find("#id").val(),
 			}
 			var configAjax = {

@@ -63,3 +63,57 @@ input[type = password]::-ms-clear {
             -webkit-appearance: none;
             margin: 0;
         }
+
+.loading {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.loading-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.loading:before {
+    position: absolute;
+    content: "";
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #1a76d1;
+    border-bottom: 16px solid #1a76d1;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -16,9 +16,11 @@ class AjaxOption {
 		this.processData = config.processData ?? true;
 		this.beforeSend = config.beforeSend ?? function () {
 			// TODO: Continue
+			AppendLoading();
 		};
 		this.complete = config.complete ?? function () {
 			// TODO: Continue
+			RemoveLoading();
 		};
 		this.success = config.success ?? function () { };
 		this.error = config.error ??
